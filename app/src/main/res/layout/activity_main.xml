@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="北京"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="50sp"/>
+    <ImageView android:id="@+id/iv_icon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_city"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="多云"
+        android:gravity="center"
+        android:textSize="38sp"/>
+
+    <LinearLayout android:id="@+id/ll_infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_weather"
+        android:layout_toRightOf="@+id/tv_weather"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="-7℃"
+            android:textSize="22sp"/>
+        <TextView android:id="@+id/tv_wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风力：3级"
+            android:textSize="18sp"/>
+        <TextView android:id="@+id/tv_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pm"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/ll_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btn_bj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京"/>
+        <Button android:id="@+id/btn_sh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上海"/>
+        <Button android:id="@+id/btn_gz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广州"/>
+        <Button android:id="@+id/btn_mh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="漠河"/>
+    </LinearLayout>
+
+</RelativeLayout>
